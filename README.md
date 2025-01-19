@@ -5,7 +5,7 @@ PetAdoption is a web platform that connects pets with potential adopters, making
 ## Setup Instructions
 
 ```bash
-git clone https://github.com/your-username/PetAdoption.git
+git clone https://github.com/ameydabhade/PetAdoption/PetAdoption.git
 
 ```
 
