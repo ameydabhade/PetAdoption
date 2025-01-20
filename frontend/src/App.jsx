@@ -4,30 +4,10 @@ import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
 import NavBar from "./components/NavBar";
 import PetCard from "./components/PetCard";
-
-const PetListingsPage = () => {
-  return (
-    <div>
-      <PetCard />
-    </div>
-  );
-};
-
-const AdoptionFormPage = () => {
-  return (
-    <div>
-      <h1>Adoption Form</h1>
-    </div>
-  );
-};
-
-const NotificationsPage = () => {
-  return (
-    <div>
-      <h1>Notifications</h1>
-    </div>
-  );
-};
+import { useState } from "react";
+import PetListingsPage from "./pages/PetListingsPage";
+import NotificationsPage from "./pages/NotificationsPage";
+import AdoptionFormPage from "./pages/AdoptionFormPage";
 
 const Layout = ({ children }) => {
   return (
