@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { PET_LISTINGS_URL } from "../utils/URLs";
+import { Link } from "react-router-dom";
 
 const PetListingsPage = () => {
   const [pets, setPets] = useState([]);
@@ -82,7 +83,7 @@ const PetListingsPage = () => {
           {pets.length > 0 ? (
             pets.map((pet) => (
               <div
-                key={pet.id}
+                key={pet._id}
                 className="border rounded-lg overflow-hidden shadow-lg"
               >
                 <img
@@ -96,9 +97,12 @@ const PetListingsPage = () => {
                   <p className="text-gray-600 mb-2">Age: {pet.age} years</p>
                   <p className="text-gray-600 mb-2">Size: {pet.size}</p>
                   <p className="text-gray-700">{pet.description}</p>
-                  <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-                    View Details
-                  </button>
+                  <Link
+                    to={`/pet/${pet._id}`}
+                    className="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+                  >
+                    Adopt
+                  </Link>
                 </div>
               </div>
             ))

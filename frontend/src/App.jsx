@@ -3,11 +3,11 @@ import "./App.css";
 import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
 import NavBar from "./components/NavBar";
-import PetCard from "./components/PetCard";
-import { useState } from "react";
+
 import PetListingsPage from "./pages/PetListingsPage";
 import NotificationsPage from "./pages/NotificationsPage";
 import AdoptionFormPage from "./pages/AdoptionFormPage";
+import { PetAdoption } from "./pages/PetAdoption";
 
 const Layout = ({ children }) => {
   return (
@@ -51,6 +51,14 @@ function App() {
         element={
           <Layout>
             <AdoptionFormPage />
+          </Layout>
+        }
+      />
+      <Route
+        path="/pet/:id"
+        element={
+          <Layout>
+            <PetAdoption />
           </Layout>
         }
       />
